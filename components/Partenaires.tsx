@@ -10,7 +10,8 @@ function Partenaires() {
               {['Fulll', 'PowerBI', 'QuickBooks', 'Sellsy', 'Revolut', 'NEXT'].map((partner, index) => (
                 <Image
                   key={index}
-                  src={`/placeholder.svg?height=60&width=120&text=${partner}`}
+                  src={`/home.jpg`}
+
                   alt={partner}
                   width={120}
                   height={60}

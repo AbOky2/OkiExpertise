@@ -8,7 +8,7 @@ function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <Image
-              src="/placeholder.svg?height=40&width=160"
+              src="/home.jpg"
               alt="OkiExpertise Logo"
               width={160}
               height={40}
