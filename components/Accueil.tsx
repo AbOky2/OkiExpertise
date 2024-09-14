@@ -13,13 +13,13 @@ import { useScroll } from "framer-motion"
 const words = `Audit - Expertise Comptable - Conseil`;
 
 export function Accueil() {
-  const { scrollY, scrollYProgress } = useScroll()
+  const { scrollY, scrollXProgress } = useScroll()
 
   return (
     <motion.div 
     
     className="  w-full">
-      <header className="bg-[url('/home.jpg')] h-screen bg-red-900 w-full  bg-no-repeat bg-cover text-white">
+      <header className="bg-[url('/home.jpg')] h-screen bg-blend-overlay brightness-75  w-full  bg-no-repeat md:bg-cover text-white">
         <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -32,7 +32,7 @@ export function Accueil() {
             
           </div>
           <div className="mt-16 p-4 max-w-2xl">
-            <h1 className="text-6xl font-bold mb-4 ">Audit - Expertise Comptable - Conseil</h1>
+            <h1 className="md:text-6xl text-3xl font-bold mb-4 ">Audit - Expertise Comptable - Conseil</h1>
             <p className="text-lg mb-8 text-gray-400">
               Oki Expertise accompagne les entreprises et sociétés commerciales dans leurs défis de gestion financière et administrative en matière juridique, légale et managériale.
             </p>
@@ -44,7 +44,6 @@ export function Accueil() {
       </header>
 
       <main>
-        
         <Besoins/>
 
         <SolutionsPersonnalise/>

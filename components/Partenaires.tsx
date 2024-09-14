@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
+
 function Partenaires() {
   return (
     <section className="bg-gray-100 py-16">
