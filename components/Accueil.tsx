@@ -8,6 +8,7 @@ import Partenaires from './Partenaires'
 import { TextGenerateEffect } from './ui/text-generate-effect'
 import { delay, motion } from "framer-motion";
 import { useScroll } from "framer-motion"
+import Valeurs from './Valeurs'
 
 
 const words = `Audit - Expertise Comptable - Conseil`;
@@ -48,6 +49,12 @@ export function Accueil() {
 
         <SolutionsPersonnalise/>
         <Accompagnement/>
+        <section className=" relative w-full overflow-hidden  flex flex-col items-center justify-center ">
+   
+ 
+   <h1 className=" text-lg md:text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  mx-auto antialiased font-bold text-center mt-8 ">Nos Valeurs</h1>
+   <Valeurs/>
+   </section>
         <Partenaires/>
         
        

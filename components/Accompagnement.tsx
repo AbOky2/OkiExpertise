@@ -11,7 +11,7 @@ function Accompagnement() {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-r from-teal-500 via-cyan-500 to-fuchsia-900 text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <motion.div
@@ -38,12 +38,14 @@ function Accompagnement() {
             variants={slideInVariants}
           >
             <h2 className="text-3xl font-bold mb-4">
-              Vous donner les moyens de prendre des décisions financières judicieuses
+              NOTRE SAVOIR-FAIRE A VOTRE SERVICE
             </h2>
             <p className="mb-6">
-              Nous vous accompagnons dans votre croissance pour vous permettre de prendre les meilleures décisions
-              financières. Grâce à notre expertise basée sur des années d'expérience, nous vous aidons à optimiser vos
-              ressources et maximiser vos résultats.
+            Nous étudions votre situation et définissons ensemble l’accompagnement 
+            le plus adapté à vos besoins afin d'optimiser vos
+            ressources et maximiser vos résultats.
+
+              
             </p>
             <ul className="mb-8">
               {['Gestion d entreprise', 'Comptabilité', 'Fiscalité', 'Optimisation fiscale & sociale', 'Gestion de patrimoine', 'Transmission d entreprise'].map((item, index) => (
