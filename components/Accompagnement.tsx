@@ -22,9 +22,9 @@ function Accompagnement() {
             variants={slideInVariants} // Utilisation des variants définis
           >
             <Image
-              src={`/home.jpg`}
+              src={`/collabo2.jpg`}
               alt="Professionnels discutant"
-              width={600}
+              width={700}
               height={400}
               className="rounded-lg shadow-lg"
             />

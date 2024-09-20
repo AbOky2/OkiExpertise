@@ -10,6 +10,10 @@ import { delay, motion } from "framer-motion";
 import { useScroll } from "framer-motion"
 import Valeurs from './Valeurs'
 import NousChoisir from './NousChoisir'
+import config from './config';
+import MessageParser from './MessageParser'
+import ActionProvider from './ActionProviders'
+import Chatbot from 'react-chatbot-kit'
 
 
 const words = `Audit - Expertise Comptable - Conseil`;
@@ -21,7 +25,7 @@ export function Accueil() {
     <motion.div 
     
     className="  w-full">
-      <header className="bg-[url('/home.jpg')] h-screen bg-blend-overlay brightness-75  w-full  bg-no-repeat md:bg-cover text-white">
+      <header className="bg-[url('/home.jpg')] h-screen bg-blend-overlay brightness-75  w-full  bg-no-repeat bg-cover text-white">
         <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -49,7 +53,9 @@ export function Accueil() {
         <Besoins/>
 
         <SolutionsPersonnalise/>
-        <Accompagnement/>
+        <Accompagnement/>             
+        <NousChoisir/>
+
         <section className=" relative w-full overflow-hidden  flex flex-col items-center justify-center ">
    
  
@@ -58,10 +64,12 @@ export function Accueil() {
    </section>
         <Partenaires/>
 
-                    <NousChoisir/>
 
-        
-       
+                    {/* <Chatbot
+        config={config}
+        messageParser={MessageParser}
+        actionProvider={ActionProvider}
+      /> */}
       </main>
           <Footer/>
       
