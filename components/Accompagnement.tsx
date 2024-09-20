@@ -11,7 +11,7 @@ function Accompagnement() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-teal-500 via-cyan-500 to-fuchsia-900 text-white">
+    <section className=" md:h-screen py-16 items-center flex bg-gradient-to-r from-teal-500 via-cyan-500 to-fuchsia-900 text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <motion.div

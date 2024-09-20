@@ -57,7 +57,7 @@ function Besoins() {
   const scrollRef = useRef();
 
   return (
-    <section ref={scrollRef} className="py-16 bg-blend-darken">
+    <section ref={scrollRef} className=" md:p-16 bg-blend-darken">
       <h2 className="text-3xl font-bold text-center mb-12">
         Des solutions pour tous les besoins des entreprises
       </h2>
