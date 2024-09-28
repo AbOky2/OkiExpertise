@@ -2,8 +2,16 @@ import { HoverEffect } from "./ui/card-hover-effect";
 
 export default function Valeurs() {
   return (
-    <div className="max-w-5xl mx-auto px-8 md:h-screen flex items-center">
-      <HoverEffect items={projects} />
+    <div className=" bg-slate-200 p-8 md:h-screen flex items-center flex-col">
+      <div>
+         <h1 className=" text-lg md:text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  mx-auto antialiased font-bold text-center mt-16 ">Nos Valeurs</h1>
+
+      </div>
+      <div>
+              <HoverEffect items={projects} />
+
+      </div>
+
     </div>
   );
 }

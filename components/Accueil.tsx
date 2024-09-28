@@ -13,12 +13,53 @@ import NousChoisir from './NousChoisir'
 import config from './config';
 import MessageParser from './MessageParser'
 import ActionProvider from './ActionProviders'
-import Chatbot from 'react-chatbot-kit'
+//import Chatbot from 'react-chatbot-kit'
+import ChatBot from "react-chatbotify";
 
 
 const words = `Audit - Expertise Comptable - Conseil`;
 
 export function Accueil() {
+  const flow={
+		start: {
+      component: (
+				<div className=''>
+    <p className=' font-regular text-black'>
+    Hello !
+    <br/>
+    <br/>
+
+Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour vous aider.
+    </p>
+  </div>
+			),
+      			path: "ask_choice"
+		},
+		
+		
+		ask_choice: {
+			message: "Select at least 2 pets that you are comfortable to work with:",
+			checkboxes: {items: ["Dog", "Cat", "Rabbit", "Hamster"], min: 2},
+			chatDisabled: true,
+			path: "ask_work_days"
+		},
+		ask_work_days: {
+			message: "How many days can you work per week?",
+			path: "end"
+		},
+		end: {
+			message: "Thank you for your interest, we will get back to you shortly!",
+			component: (
+				<div >
+					
+					ABC
+				</div>
+			),
+			options: ["New Application"],
+			chatDisabled: true,
+			path: "start"
+		},
+	}
   const { scrollY, scrollXProgress } = useScroll()
 
   return (
@@ -56,14 +97,11 @@ export function Accueil() {
         <Accompagnement/>             
         <NousChoisir/>
 
-        <section className=" relative w-full overflow-hidden  flex flex-col items-center justify-center ">
    
  
-   <h1 className=" text-lg md:text-6xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  mx-auto antialiased font-bold text-center mt-16 ">Nos Valeurs</h1>
    <Valeurs/>
-   </section>
         <Partenaires/>
-
+        <ChatBot settings={{ chatHistory: {storageKey: "example_basic_form"}}} flow={flow}/>
 
                     {/* <Chatbot
         config={config}

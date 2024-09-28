@@ -5,6 +5,8 @@ const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
     if (message.includes('salut')) {
       actions.handleHello();
+    }if(message.includes('bonjour')){
+      actions.handleChatBot();
     }
   };
 
