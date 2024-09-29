@@ -1,4 +1,6 @@
 // in ActionProvider.jsx
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React from 'react';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {

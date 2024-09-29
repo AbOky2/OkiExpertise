@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { Config } from "tailwindcss";
 const svgToDataUri = require("mini-svg-data-uri");
