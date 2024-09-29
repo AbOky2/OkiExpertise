@@ -42,7 +42,7 @@ function Accompagnement() {
             </h2>
             <p className="mb-6">
             Nous étudions votre situation et définissons ensemble l’accompagnement 
-            le plus adapté à vos besoins afin d'optimiser vos
+            le plus adapté à vos besoins afin d&apos;optimiser vos
             ressources et maximiser vos résultats.
 
               
