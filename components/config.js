@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // in config.js
 import { createChatBotMessage } from 'react-chatbot-kit';
 import ChatbotWidget from './ChatbotWidget';
