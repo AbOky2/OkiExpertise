@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 interface MyCardsProps {
   image: string;
   title: string;
-  description: object;
+  description: React.ReactNode;  // Correction ici
 }
 
 function MyCards({ image, title, description }: MyCardsProps) {
@@ -16,7 +16,6 @@ function MyCards({ image, title, description }: MyCardsProps) {
     <motion.div
       style={{ y: translateY }} // Applique la transformation sur l'axe Y
       whileHover={{ scale: 1.1 }}
-      
       className="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg"
       id='besoins'
     >
@@ -28,37 +27,16 @@ function MyCards({ image, title, description }: MyCardsProps) {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title}</h5>
         </a>
         <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</div>
-        {/* <a
-          href="#"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          En Savoir plus
-          <svg
-            className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </a> */}
       </div>
     </motion.div>
   );
 }
 
 function Besoins() {
-  const scrollRef = useRef();
+  const scrollRef = useRef<HTMLElement | null>(null);  // Correction ici
 
   return (
-    <section ref={scrollRef} className=" md:p-16 bg-blend-darken">
+    <section ref={scrollRef} className="md:p-16 bg-blend-darken">
       <h2 className="text-3xl font-bold text-center mb-12">
         Des solutions pour tous les besoins des entreprises
       </h2>
@@ -68,12 +46,12 @@ function Besoins() {
           image="/audit.jpg"
           title="Audit"
           description={<p>• Audit comptable et financier <br/>
-• Commissariat aux apports <br/>
-• Audit des coûts pétroliers <br/>
-• Audit qualité<br/>
-• Audit stratégique<br/>
-• Audit opérationnel<br/>
-• Audit et autres missions contractuelles</p>}
+            • Commissariat aux apports <br/>
+            • Audit des coûts pétroliers <br/>
+            • Audit qualité<br/>
+            • Audit stratégique<br/>
+            • Audit opérationnel<br/>
+            • Audit et autres missions contractuelles</p>}
         />
         <MyCards
           image="/expertise.jpg"
@@ -90,7 +68,8 @@ function Besoins() {
             • Accompagnement sur mesure (revue
             de procédures, automatisation des
             processus, diagnostic de conformité en
-            matière comptable, fiscale et sociale)</p>}        />
+            matière comptable, fiscale et sociale)</p>}
+        />
         <MyCards
           image="/conseil.jpg"
           title="Conseil"
@@ -106,7 +85,8 @@ function Besoins() {
             • Gouvernance, risques et contrôle
             Interne<br/>
             • Autres interventions selon des
-            procédures convenues</p>}        />
+            procédures convenues</p>}
+        />
         <MyCards
           image="/risque.png"
           title="Risques et Reglementaires"
@@ -120,7 +100,8 @@ function Besoins() {
             • Risque SI & Technologique<br/>
             • Cyber-Risque<br/>
             • Conformité réglementaire OHADA,
-            CEMAC, COBAC etc.</p>}        />
+            CEMAC, COBAC etc.</p>}
+        />
         <MyCards
           image="/finislam.jpg"
           title="Finance Islamique"
@@ -130,7 +111,8 @@ function Besoins() {
             • Evaluation du dispositif du contrôle
             interne d’une banque islamique<br/>
             • Audit chariatique contractuel
-            • Gouvernance chariatique</p>}        />
+            • Gouvernance chariatique</p>}
+        />
         <MyCards
           image="/tax.jpg"
           title="Tax & Legal"
@@ -144,7 +126,8 @@ function Besoins() {
             groupes de sociétés (fusion, acquisition,
             rapprochement d’entreprises)<br/>
             • Négociation ou renégociation de
-            conventions fiscales internationales</p>}        />
+            conventions fiscales internationales</p>}
+        />
       </div>
     </section>
   );
