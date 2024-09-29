@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
+  // eslint-disable-next-line @typescript-eslint/ban-types
   callback: Function
 ) => {
   useEffect(() => {
