@@ -34,7 +34,7 @@ function Accompagnement() {
             className="md:w-1/2"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.7 }}
             variants={slideInVariants}
           >
             <h2 className="text-3xl font-bold mb-4">

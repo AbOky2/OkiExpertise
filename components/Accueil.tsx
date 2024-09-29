@@ -15,6 +15,8 @@ import MessageParser from './MessageParser'
 import ActionProvider from './ActionProviders'
 //import Chatbot from 'react-chatbot-kit'
 import ChatBot from "react-chatbotify";
+import ContactForm from './ContactForm'
+import Navbar from './Navbar'
 
 
 const words = `Audit - Expertise Comptable - Conseil`;
@@ -66,6 +68,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
     <motion.div 
     
     className="  w-full">
+      <Navbar/>
       <header className="bg-[url('/home.jpg')] h-screen bg-blend-overlay brightness-75  w-full  bg-no-repeat bg-cover text-white">
         <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
@@ -84,7 +87,8 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
               Oki Expertise accompagne les entreprises et sociétés commerciales dans leurs défis de gestion financière et administrative en matière juridique, légale et managériale.
             </p>
             <Button className="bg-[#2CC2BA] hover:bg-[#25A5A0] text-white">
-              Parler à un conseiller
+              <a href="https://calendly.com/d/cps2-pnj-5cw/reunion-ponctuelle">
+              Parler à un conseiller</a>
             </Button>
           </div>
         </motion.div>
@@ -108,6 +112,8 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
         messageParser={MessageParser}
         actionProvider={ActionProvider}
       /> */}
+
+      <ContactForm/>
       </main>
           <Footer/>
       

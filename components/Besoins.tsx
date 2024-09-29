@@ -19,6 +19,7 @@ function MyCards({ image, title, description }: MyCardsProps) {
       whileHover={{ scale: 1.1 }}
       
       className="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg"
+      id='besoins'
     >
       <a href="#">
         <img className="rounded-t-lg" src={image} alt="" />

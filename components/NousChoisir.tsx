@@ -48,7 +48,9 @@ function NousChoisir() {
   ];
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen py-12 bg-cover bg-center" style={{ backgroundImage: "url('/collabo4.jpg')" }}>
+    <section className="relative flex flex-col items-center justify-center min-h-screen py-12 bg-cover bg-center"
+    id='services'
+     style={{ backgroundImage: "url('/collabo4.jpg')" }}>
       {/* Overlay layer */}
       <div className="absolute inset-0 bg-black opacity-80"></div>
 
