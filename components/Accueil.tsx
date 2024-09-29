@@ -86,7 +86,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
               Oki Expertise accompagne les entreprises et sociétés commerciales dans leurs défis de gestion financière et administrative en matière juridique, légale et managériale.
             </p>
             <Button className="bg-[#2CC2BA] hover:bg-[#25A5A0] text-white">
-              <a href="https://wa.me/33755763318">
+              <a href="https://wa.me/33751516642">
               Parler à un conseiller</a>
             </Button>
           </div>
