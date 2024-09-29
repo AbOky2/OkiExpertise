@@ -10,9 +10,6 @@ import { delay, motion } from "framer-motion";
 import { useScroll } from "framer-motion"
 import Valeurs from './Valeurs'
 import NousChoisir from './NousChoisir'
-import config from './config';
-import MessageParser from './MessageParser'
-import ActionProvider from './ActionProviders'
 //import Chatbot from 'react-chatbot-kit'
 import ChatBot from "react-chatbotify";
 import ContactForm from './ContactForm'
@@ -108,11 +105,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
         <Partenaires/>
         {/* <ChatBot settings={{ chatHistory: {storageKey: "example_basic_form"}}} flow={flow}/> */}
 
-                    {/* <Chatbot
-        config={config}
-        messageParser={MessageParser}
-        actionProvider={ActionProvider}
-      /> */}
+             
 
       <ContactForm/>
       </main>
