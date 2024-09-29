@@ -39,7 +39,7 @@ function NousChoisir() {
       svgIcon: '/svg2.svg',
     },
     {
-      title: 'Expertise secteurs ',
+      title: 'Expertise secteurs',
       description: 'Nous sommes spécialisés dans de nombreux secteurs d\'activités.',
       imgSrc: '/collabo2.jpg',
       text: 'Texte de base 6',
@@ -48,9 +48,11 @@ function NousChoisir() {
   ];
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen py-12 bg-cover bg-center"
-    id='services'
-     style={{ backgroundImage: "url('/collabo4.jpg')" }}>
+    <section
+      className="relative flex flex-col items-center justify-center min-h-screen py-12 bg-cover bg-center"
+      id="services"
+      style={{ backgroundImage: "url('/collabo4.jpg')" }}
+    >
       {/* Overlay layer */}
       <div className="absolute inset-0 bg-black opacity-80"></div>
 
@@ -61,15 +63,15 @@ function NousChoisir() {
         </h1>
 
         {/* Grid container */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="group h-96 w-96 [perspective:1000px]"
-              initial={{ opacity: 0, y: -50 }} // Départ du haut avec une opacité 0
-              whileInView={{ opacity: 1, y: 0 }} // Arrive à la position normale avec une opacité 1
-              transition={{ duration: 0.8, delay: index * 0.2 }} // Effet différé pour chaque carte
-              viewport={{ once: true }} // Animation se déclenche une fois lorsque la carte est visible
+              className="group h-80 sm:h-96 w-full sm:w-72 md:w-96 [perspective:1000px]" // Dimensions ajustées pour mobile
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
             >
               {/* Card container with flip effect */}
               <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">

@@ -15,6 +15,7 @@ import ChatBot from "react-chatbotify";
 import ContactForm from './ContactForm'
 import Navbar from './Navbar'
 import { HeroSection } from './HeroSection'
+import NewForm from './NewForm'
 
 
 const words = `Audit - Expertise Comptable - Conseil`;
@@ -107,7 +108,8 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
 
              
 
-      <ContactForm/>
+      {/* <ContactForm/> */}
+      <NewForm/>
       </main>
           <Footer/>
       
