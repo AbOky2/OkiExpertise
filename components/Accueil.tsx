@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import { Button } from '@/components/ui/button'
 import Footer from './Footer'
@@ -5,7 +6,6 @@ import Besoins from './Besoins'
 import SolutionsPersonnalise from './SolutionsPersonnalise'
 import Accompagnement from './Accompagnement'
 import Partenaires from './Partenaires'
-import { TextGenerateEffect } from './ui/text-generate-effect'
 import { delay, motion } from "framer-motion";
 import { useScroll } from "framer-motion"
 import Valeurs from './Valeurs'

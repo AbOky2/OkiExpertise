@@ -18,7 +18,7 @@ function SolutionsPersonnalise() {
       
         className="container mx-auto px-4"
       >
-        <h2 className="text-3xl text-gray-900 font-bold text-center mb-8">Vous avez besoin d'une solution personnalisée?</h2>
+        <h2 className="text-3xl text-gray-900 font-bold text-center mb-8">Vous avez besoin d&apos;une solution personnalisée?</h2>
         <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
           Oki Expertise met à votre disposition notre expertise pour vous fournir la solution dont vous avez besoin pour atteindre vos objectifs.
         </p>

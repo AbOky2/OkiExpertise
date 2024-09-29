@@ -44,7 +44,7 @@ id='contact'
       </div>
 
       <div className="">  
-        <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
+        <label  className="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
         <div className='relative'>
         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
           <svg className="w-4 h-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
@@ -71,8 +71,8 @@ id='contact'
 
       </div>
       <div className='mb-4'>
-      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Message</label>
-    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+      <label  className="block mb-2 text-sm font-medium text-gray-900 ">Message</label>
+    <textarea id="message"  className="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
    placeholder="Tapez votre message "></textarea>
       </div>
    
