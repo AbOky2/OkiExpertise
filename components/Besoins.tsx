@@ -17,7 +17,7 @@ function MyCards({ image, title, description }: MyCardsProps) {
       style={{ y: translateY }} // Applique la transformation sur l'axe Y
       whileHover={{ scale: 1.1 }}
       className="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg"
-      id='besoins'
+      id='services'
     >
       <a href="#">
         <img className="rounded-t-lg" src={image} alt="" />
@@ -37,7 +37,9 @@ function Besoins() {
 
   return (
     <section ref={scrollRef} className="md:p-16 bg-blend-darken">
-      <h2 className="text-3xl font-bold text-center mb-12">
+      <h2
+      
+       className="text-3xl font-bold text-center mb-12 mt-12">
         Des solutions pour tous les besoins des entreprises
       </h2>
 
@@ -57,14 +59,9 @@ function Besoins() {
           image="/expertise.jpg"
           title="Expertise Comptable"
           description={<p>• Tenue comptable<br/>
-            • Diagnostic d’impact comptable d’un
-            changement de règlementation<br/>
-            • Optimisation financière<br/>
-            • Etablissement des états financiers<br/>
+                       • Etablissement des états financiers<br/>
             • Conversion des états financiers en
             norme IFRS<br/>
-            • Restructuration comptable et
-            financière<br/>
             • Accompagnement sur mesure (revue
             de procédures, automatisation des
             processus, diagnostic de conformité en
@@ -79,8 +76,6 @@ function Besoins() {
             difficulté<br/>
             • Elaboration de manuel de procédures<br/>
             • Stratégie & Innovation<br/>
-            • Marketing & Commercial<br/>
-            • Opérations, Supply Chain & Achats<br/>
             • Système d&apos;Information & Technologies<br/>
             • Gouvernance, risques et contrôle
             Interne<br/>
@@ -97,19 +92,16 @@ function Besoins() {
             des risques COSO (Risques stratégiques,
             opérationnels, reporting et
             réglementaires)<br/>
-            • Risque SI & Technologique<br/>
-            • Cyber-Risque<br/>
-            • Conformité réglementaire OHADA,
-            CEMAC, COBAC etc.</p>}
+            • Risque SI & Technologie<br/>
+            • Conformité réglementaire PCJ, OHADA, COBAC, etc.</p>}
         />
         <MyCards
           image="/finislam.jpg"
           title="Finance Islamique"
           description={<p>• Elaboration du dispositif du contrôle
-            interne/manuel de procédure d’une
-            banque islamique<br/>
+            interne/manuel de procédure conformement aux normes AAOIFI <br/>
             • Evaluation du dispositif du contrôle
-            interne d’une banque islamique<br/>
+            interne<br/>
             • Audit chariatique contractuel
             • Gouvernance chariatique</p>}
         />
@@ -125,8 +117,7 @@ function Besoins() {
             • Restructuration d’entreprises et de
             groupes de sociétés (fusion, acquisition,
             rapprochement d’entreprises)<br/>
-            • Négociation ou renégociation de
-            conventions fiscales internationales</p>}
+            </p>}
         />
       </div>
     </section>

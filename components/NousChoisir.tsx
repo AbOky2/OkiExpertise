@@ -50,7 +50,7 @@ function NousChoisir() {
   return (
     <section
       className="relative flex flex-col items-center justify-center min-h-screen py-12 bg-cover bg-center"
-      id="services"
+      id="pourquoiNous"
       style={{ backgroundImage: "url('/collabo4.jpg')" }}
     >
       {/* Overlay layer */}

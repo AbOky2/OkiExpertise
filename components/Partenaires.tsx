@@ -8,12 +8,12 @@ function Partenaires() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Nos partenaires</h2>
             <div className="flex flex-wrap justify-center items-center gap-8">
-              {['Fulll', 'PowerBI', 'QuickBooks', 'Sellsy', 'Revolut', 'NEXT'].map((partner, index) => (
+              {['/home.jpg', '/ordre.jpg', '/ordre2.jpg', '/home.jpg', '/home.jpg', '/home.jpg'].map((partner, index) => (
                 <Image
                   key={index}
-                  src={`/home.jpg`}
+                  src={partner}
 
-                  alt={partner}
+                  alt={'partenaires'}
                   width={120}
                   height={60}
                   className="grayscale hover:grayscale-0 transition-all duration-300"
