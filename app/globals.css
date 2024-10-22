@@ -59,3 +59,71 @@
   }
 }
 
+
+.animated_card {
+  background: #222;
+  position: relative;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.animated_card::before {
+  content: '';
+  inset: 0;
+  background: #2CC2BA;
+  transition: clip-path 0.75s ease-in-out;
+  clip-path: inset(0 50%);
+}
+
+.animated_card:hover::before {
+  clip-path: inset(0);
+}
+
+.animated_card::after {
+  position: absolute;
+  content: '';
+  inset: 10px;
+  background: #000;
+}
+
+
+
+.slider{
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+
+}
+.slider .list{
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width)*var(--quantity));
+  position: relative;
+
+}
+
+.slider .list .item {
+
+  position: relative;
+  left: 100%;
+  animation: autoRun 40s linear infinite;
+  animation-delay: calc((20s / var(--quantity))* (var(--position)-1));
+}
+
+.slider .list .item .img{
+width: 100%;
+}
+
+@keyframes autoRun {
+  from{
+      left: 100%;
+  }to {
+      left: -100%;
+  }
+}
+.slider:hover .item{
+  animation-play-state: paused!important;
+}
+

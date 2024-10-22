@@ -1,28 +1,40 @@
-import React from 'react'
-import Image from 'next/image'
-
+import React from 'react';
+import Image from 'next/image';
 
 function Partenaires() {
   return (
-    <section className="bg-gray-100 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Nos partenaires</h2>
-            <div className="flex flex-wrap justify-center items-center gap-8">
-              {['/home.jpg', '/ordre.jpg', '/ordre2.jpg', '/home.jpg', '/home.jpg', '/home.jpg'].map((partner, index) => (
-                <Image
-                  key={index}
-                  src={partner}
-
-                  alt={'partenaires'}
-                  width={120}
-                  height={60}
-                  className="grayscale hover:grayscale-0 transition-all duration-300"
-                />
-              ))}
-            </div>
+    <section className="bg-white py-16">
+      <div className=' mb-24'>
+              <h1 className='text-center font-semibold md:text-5xl text-3xl'>Nos Partenaires</h1>
+      </div>
+      <div
+        className="slider  "
+        style={{
+          '--width': '100px',
+          '--height': '50px',
+          '--quantity': 5,
+        } as React.CSSProperties}
+      >
+        <div className="list flex justify-between grayscale">
+          <div className="item grayscale">
+            <Image src="/fulll.png" alt="Full Logo" width={100} height={50} />
           </div>
-        </section>
-  )
+          <div className="item">
+            <Image src="/dext.png" alt="Dext Logo" width={100} height={50} />
+          </div>
+          <div className="item">
+            <Image src="/henri.png" alt="Henri Logo" width={100} height={50} />
+          </div>
+          <div className="item">
+            <Image src="/silae.png" alt="Silae Logo" width={100} height={50} />
+          </div>
+          <div className="item">
+            <Image src="/xodo.png" alt="Xodo Logo" width={100} height={50} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Partenaires
+export default Partenaires;

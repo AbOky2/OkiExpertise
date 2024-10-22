@@ -16,6 +16,7 @@ import ContactForm from './ContactForm'
 import Navbar from './Navbar'
 import { HeroSection } from './HeroSection'
 import NewForm from './NewForm'
+import Services from './Services'
 
 
 const words = `Audit - Expertise Comptable - Conseil`;
@@ -105,6 +106,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
    <Valeurs/>
         <Partenaires/>
         {/* <ChatBot settings={{ chatHistory: {storageKey: "example_basic_form"}}} flow={flow}/> */}
+        <Services/>
 
              
 
