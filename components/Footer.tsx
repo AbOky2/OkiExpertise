@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 function Footer() {
   return (
-        <footer className="bg-[#1E2738] text-white py-8">
+        <footer className="bg-white text-gray-800 py-8">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <Image
-              src="/home.jpg"
+              src="/newLogo.png"
               alt="OkiExpertise Logo"
               width={160}
               height={40}

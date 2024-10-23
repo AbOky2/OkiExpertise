@@ -14,7 +14,7 @@ function Navbar() {
 <nav className="bg-white border-gray-100  border-b-2 shadow-md z-20 top-0 start-0 fixed w-full">
     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/logoEntete.png" className=" h-10 w-16 rounded-xl" alt="Logo entreprise" />
+            <img src="/newLogo.png" className=" h-10 w-16 rounded-xl" alt="Logo entreprise" />
         </a>
         <button data-collapse-toggle="mega-menu-full" type="button" onClick={handleClick} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden" aria-controls="mega-menu-full" aria-expanded="false">
             <span className="sr-only">Open main menu</span>

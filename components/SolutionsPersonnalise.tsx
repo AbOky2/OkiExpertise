@@ -23,9 +23,10 @@ function SolutionsPersonnalise() {
           Oki Expertise met à votre disposition notre expertise pour vous fournir la solution dont vous avez besoin pour atteindre vos objectifs.
         </p>
         <div className="text-center">
-          <Button className="bg-[#2CC2BA] hover:bg-[#25A5A0] text-white">
-            Parler à un conseiller
-          </Button>
+        <Button className="bg-[#2CC2BA] hover:bg-[#25A5A0] text-white">
+              <a href="https://wa.me/33751516642">
+              Parler à un conseiller</a>
+            </Button>
         </div>
       </motion.div>
     </section>

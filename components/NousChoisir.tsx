@@ -54,7 +54,7 @@ function NousChoisir() {
       style={{ backgroundImage: "url('/collabo4.jpg')" }}
     >
       {/* Overlay layer */}
-      <div className="absolute inset-0 bg-black opacity-80"></div>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
 
       {/* Content layer */}
       <div className="relative z-10">
