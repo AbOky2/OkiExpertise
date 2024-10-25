@@ -152,7 +152,7 @@ les performances."
                     <div>
                         <img src="expert4.png" width={20} height={20} alt="" />
                     </div>
-                    <div className='text-[#758CA0] text-sm'>
+                    <div className='text-[#758CA0] text-sm w-full'>
                     Accompagnement sur mesure 
                     (revue de procédures, automatisation des processus, diagnostic de conformité en matière comptable, fiscale et sociale)                    </div>
                 </div>          
@@ -266,7 +266,7 @@ de mettre en place des mesures préventives appropriées."
                     <div>
                         <img src="conseil4.png" width={20} height={20} alt="" />
                     </div>
-                    <div className='text-[#758CA0] text-sm'>
+                    <div className='text-[#758CA0] text-sm w-full'>
                     Stratégie de gouvernance et de gestion des risques COSO
                      (Risques stratégiques, opérationnels, reporting et réglementaires)           
                     </div>
@@ -312,7 +312,7 @@ en place de manuels de procédure pour les institutions financières islamiques.
                     <div>
                         <img src="finance1.png" width={20} height={20} alt="" />
                     </div>
-                    <div className='text-[#758CA0] text-sm'>
+                    <div className='text-[#758CA0] text-sm w-full'>
                     Elaboration du dispositif du contrôle interne/manuel de procédure conformement aux normes AAOIFI <br/>
                     </div>
                 </div>
@@ -404,7 +404,7 @@ remplir correctement et en temps voulu toutes vos obligations fiscales."
                     <div>
                         <img src="legal5.png" width={20} height={20} alt="" />
                     </div>
-                    <div className='text-[#758CA0] text-sm'>
+                    <div className='text-[#758CA0] text-sm w-full'>
                     Restructuration d’entreprises et de groupes de sociétés (fusion, acquisition, rapprochement d’entreprises)        
                     </div>
                 </div>    
