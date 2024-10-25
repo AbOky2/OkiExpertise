@@ -279,14 +279,7 @@ de mettre en place des mesures préventives appropriées."
                     Elaboration de manuel de procédures            
                     </div>
                 </div>
-                <div className='flex p-2 gap-4 mb-1'>
-                    <div>
-                        <img src="conseil6.png" width={20} height={20} alt="" />
-                    </div>
-                    <div className='text-[#758CA0] text-sm'>
-                    Stratégie & Innovation            
-                    </div>
-                </div>
+               
                 <div className='flex p-2 gap-4 mb-1'>
                     <div>
                         <img src="conseil7.png" width={20} height={20} alt="" />
@@ -300,7 +293,7 @@ de mettre en place des mesures préventives appropriées."
                         <img src="conseil8.png" width={20} height={20} alt="" />
                     </div>
                     <div className='text-[#758CA0] text-sm'>
-                    Conformité réglementaire PCJ, OHADA, COBAC, etc.        
+                    Conformité réglementaire PCG, OHADA, COBAC, etc.        
                     </div>
                 </div>    
             </div>

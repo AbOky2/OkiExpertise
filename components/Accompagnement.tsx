@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './ui/button';
+import { Button } from './ui/moving-border';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -61,7 +61,7 @@ function Accompagnement() {
                 </li>
               ))}
             </ul>
-            <Button className="bg-[#2CC2BA] hover:bg-[#25A5A0] text-white">Parler à un conseiller</Button>
+            <Button className="bg-slate-900 hover:bg-[#25A5A0] text-white">Parler à un conseiller</Button>
           </motion.div>
         </div>
       </div>

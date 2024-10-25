@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
-import { Button } from '@/components/ui/button'
 import Footer from './Footer'
 import Besoins from './Besoins'
 import SolutionsPersonnalise from './SolutionsPersonnalise'
@@ -17,6 +16,7 @@ import Navbar from './Navbar'
 import { HeroSection } from './HeroSection'
 import NewForm from './NewForm'
 import Services from './Services'
+import { Button } from './ui/moving-border'
 
 
 const words = `Audit - Expertise Comptable - Conseil`;
@@ -86,7 +86,8 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
             <p className="text-lg mb-8 text-gray-400">
               Oki Expertise, inscrit à l&apos;ordre des Experts-Comptables de la région île de France, accompagne les entreprises et sociétés commerciales dans leurs défis de gestion financière et administrative en matière juridique, légale et managériale.
             </p>
-            <Button className="bg-[#2CC2BA] hover:bg-[#25A5A0] text-white">
+          
+            <Button className="bg-[#25A5A0] hover:bg-slate-900 text-white">
               <a href="https://wa.me/33751516642">
               Parler à un conseiller</a>
             </Button>
