@@ -253,14 +253,7 @@ de mettre en place des mesures préventives appropriées."
                     Elaboration de la cartographie des risques <br/>
                     </div>
                 </div>
-                <div className='flex p-2 gap-4 mb-1'>
-                    <div>
-                        <img src="regle3.png" width={20} height={20} alt="" />
-                    </div>
-                    <div className='text-[#758CA0] text-sm'>
-                    Elaboration de manuel de procédures                 
-                    </div>
-                </div>
+               
                 <div className='flex p-2 gap-4 mb-1'>
                     <div>
                         <img src="conseil4.png" width={20} height={20} alt="" />
