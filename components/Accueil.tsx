@@ -69,7 +69,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
     
     className="  w-full">
       <Navbar/>      
-      <header className="bg-[url('/bgOki.jpg')] h-screen bg-blend-overlay brightness-75 md:mb-20 mb-10 w-full justify-center flex  bg-no-repeat bg-cover text-white">
+      <header className="bg-[url('/bgOki.jpg')] h-screen bg-blend-overlay brightness-75 md:mb-20 mb-10 w-full justify-center flex  bg-no-repeat bg-cover text-white ">
         <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -84,7 +84,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
           <div className="mt-16 p-4 max-w-2xl flex justify-center flex-col items-center md:items-start">
             <h1 className="md:text-6xl text-3xl font-bold mb-4 ">Audit - Expertise Comptable - Conseil- Juridique</h1>
             <p className="text-lg mb-8 text-gray-400">
-              Oki Expertise, inscrit à l&apos;ordre des Experts-Comptables de la région île de France, accompagne les entreprises et sociétés commerciales dans leurs défis de gestion financière et administrative en matière juridique, légale et managériale.
+              Oki Expertise, inscrit à l&apos;ordre des Experts-Comptables de la région île de France, accompagne les entreprises et sociétés commerciales dans leurs défis de gestion financière et administrative en matière comptable, juridique, légale et managériale.
             </p>
           
             <Button className="bg-[#25A5A0] hover:bg-slate-900 text-white">

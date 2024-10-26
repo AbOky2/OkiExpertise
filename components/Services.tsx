@@ -118,9 +118,8 @@ les performances."
 <MyCards
           image="/expert.png"
           title="Expertise Comptable"
-          description="Notre équipe d&#39;experts effectue des audits opérationnels pour évaluer l&#39;efficacité des
-processus internes, identifier les inefficacités et recommander des solutions pour améliorer
-les performances."
+          description="Notre équipe d&#39;experts en comptabilité travaille en étroite collaboration avec nos clients
+          pour assurer une tenue de comptabilité précise et conforme aux normes en vigueur."
           details={
             <div>
                 
@@ -154,7 +153,7 @@ les performances."
                     </div>
                     <div className='text-[#758CA0] text-sm w-full'>
                     Accompagnement sur mesure 
-                    (revue de procédures, automatisation des processus, diagnostic de conformité en matière comptable, fiscale et sociale)                    </div>
+                    (revue de procédures, automatisation des processus, diagnostic de conformité en matière comptable, fiscale et sociale,etc)                    </div>
                 </div>          
             </div>
             }
