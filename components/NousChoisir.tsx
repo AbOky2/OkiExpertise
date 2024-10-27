@@ -8,42 +8,36 @@ function NousChoisir() {
       title: 'Gain de Temps',
       description: 'Concentrez-vous sur votre activité, nous nous occupons du reste.',
       imgSrc: '/collabo1.jpg',
-      text: 'Texte de base 1',
       svgIcon: '/svg1.svg',
     },
     {
       title: 'Collaborateur dédié',
       description: 'Accompagnement et conseils personnalisés.',
       imgSrc: '/collabo2.jpg',
-      text: 'Texte de base 2',
       svgIcon: '/svg4.svg',
     },
     {
       title: 'Audit, Comptabilité,...',
       description: 'Accompagnement dans toutes vos problématiques du quotidien.',
       imgSrc: '/collabo3.png',
-      text: 'Texte de base 3',
       svgIcon: '/svg5.svg',
     },
     {
       title: 'Tarifs attractifs',
       description: 'Nos honoraires sont compétitifs comparé aux cabinets traditionnels.',
       imgSrc: '/collabo4.jpg',
-      text: 'Texte de base 4',
       svgIcon: '/svg6.svg',
     },
     {
       title: 'Réactivité',
       description: 'Nous sommes disponible, quand vous l\'êtes.',
       imgSrc: '/collabo5.jpg',
-      text: 'Texte de base 5',
       svgIcon: '/svg2.svg',
     },
     {
       title: 'Expertise secteurs',
       description: 'Nous sommes spécialisés dans de nombreux secteurs d\'activités.',
       imgSrc: '/collabo2.jpg',
-      text: 'Texte de base 6',
       svgIcon: '/svg3.svg',
     },
   ];
@@ -78,7 +72,6 @@ function NousChoisir() {
               <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front side (Text) */}
                 <div className="absolute inset-0 h-full w-full bg-black/40 rounded-xl text-center text-slate-200 [backface-visibility:hidden] flex flex-col items-center justify-center z-10 p-4 border-2 border-neutral-700">
-                  <p className="text-base text-start flex">{card.text}</p>
                   <h1 className="text-3xl font-bold mb-8">{card.title}</h1>
                   <p className="text-lg text-gray-500">{card.description}</p>
                 </div>
