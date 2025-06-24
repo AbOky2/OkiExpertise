@@ -8,15 +8,15 @@ interface MyCardsProps {
     description: string;
     details: React.ReactNode;
     index: number;
-}
-
+  }
+  
 function MyCards({ image, title, description, details, index }: MyCardsProps) {
     const [isHovered, setIsHovered] = useState(false);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+  
     return (
-        <motion.div
+      <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 60 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
@@ -84,9 +84,9 @@ function MyCards({ image, title, description, details, index }: MyCardsProps) {
                         animate={isInView ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
                     >
-                        {title}
+            {title}
                     </motion.h3>
-                </div>
+        </div>
 
                 {/* Description */}
                 <motion.p 
@@ -105,7 +105,7 @@ function MyCards({ image, title, description, details, index }: MyCardsProps) {
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.6 }}
                     className="space-y-3"
                 >
-                    {details}
+                {details}
                 </motion.div>
 
                 {/* Hover effect - Learn more button */}
@@ -122,10 +122,10 @@ function MyCards({ image, title, description, details, index }: MyCardsProps) {
                         </svg>
                     </button>
                 </motion.div>
-            </div>
-        </motion.div>
+        </div>
+      </motion.div>
     );
-}
+  }
 
 // Enhanced service detail items
 function ServiceDetailItem({ icon, text, index }: { icon: string, text: string, index: number }) {
@@ -249,13 +249,13 @@ function Services() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
                     {services.map((service, index) => (
-                        <MyCards
+<MyCards
                             key={index}
                             index={index}
                             image={service.image}
                             title={service.title}
                             description={service.description}
-                            details={
+          details={
                                 <div className="space-y-1">
                                     {service.details.map((detail, detailIndex) => (
                                         <ServiceDetailItem
@@ -265,14 +265,14 @@ function Services() {
                                             index={detailIndex}
                                         />
                                     ))}
-                                </div>
-                            }
-                        />
+            </div>
+            }
+        />
                     ))}
-                </div>
+                </div>    
             </div>
         </section>
     );
 }
 
-export default Services 
+export default Services
