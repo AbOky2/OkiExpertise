@@ -46,17 +46,23 @@ function Navbar() {
         closed: {
             opacity: 0,
             height: 0,
+            y: -20,
             transition: {
-                duration: 0.3,
-                ease: "easeInOut"
+                duration: 0.4,
+                ease: [0.04, 0.62, 0.23, 0.98],
+                staggerChildren: 0.05,
+                staggerDirection: -1
             }
         },
         open: {
             opacity: 1,
             height: "auto",
+            y: 0,
             transition: {
-                duration: 0.3,
-                ease: "easeInOut"
+                duration: 0.4,
+                ease: [0.04, 0.62, 0.23, 0.98],
+                staggerChildren: 0.07,
+                delayChildren: 0.1
             }
         }
     };
@@ -64,23 +70,26 @@ function Navbar() {
     const menuItemVariants = {
         closed: { 
             opacity: 0, 
-            x: -20,
-            transition: { duration: 0.2 }
+            x: -30,
+            y: -10,
+            transition: { 
+                duration: 0.3,
+                ease: [0.4, 0, 0.2, 1]
+            }
         },
-        open: (index: number) => ({
+        open: {
             opacity: 1,
             x: 0,
+            y: 0,
             transition: {
-                duration: 0.3,
-                delay: index * 0.1,
-                ease: "easeOut"
+                duration: 0.5,
+                ease: [0.04, 0.62, 0.23, 0.98]
             }
-        })
+        }
     };
 
     return (
-        <>
-            <motion.nav 
+        <motion.nav 
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -182,30 +191,26 @@ function Navbar() {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className={`md:hidden backdrop-blur-md border-t transition-all duration-300 ${
-                                scrolled 
-                                    ? 'bg-white border-gray-200/50' 
-                                    : 'bg-white/95 border-white/20'
-                            }`}
+                            className="md:hidden backdrop-blur-xl bg-gradient-to-br from-[#25A5A0]/95 via-[#2CC2BA]/95 to-[#25A5A0]/95 border-t border-white/20 shadow-2xl"
                             variants={mobileMenuVariants}
                             initial="closed"
                             animate="open"
                             exit="closed"
                         >
-                            <div className="px-6 py-6 space-y-4">
+                            <div className="px-6 py-8 space-y-3">
                                 {menuItems.map((item, index) => (
                                     <motion.div
                                         key={index}
-                                        custom={index}
                                         variants={menuItemVariants}
                                         initial="closed"
                                         animate="open"
                                         exit="closed"
+                                        custom={index}
                                     >
                                         <a 
                                             href={item.href}
                                             onClick={handleClick}
-                                            className="block py-3 px-4 text-lg font-medium text-gray-700 hover:text-[#25A5A0] hover:bg-gray-50/80 rounded-xl transition-all duration-200"
+                                            className="block py-4 px-6 text-lg font-semibold text-white hover:text-gray-100 hover:bg-white/20 rounded-2xl transition-all duration-300 backdrop-blur-sm border border-white/10 hover:border-white/30"
                                         >
                                             {item.label}
                                         </a>
@@ -214,7 +219,6 @@ function Navbar() {
                                 
                                 {/* Mobile CTA */}
                                 <motion.div
-                                    custom={menuItems.length}
                                     variants={menuItemVariants}
                                     initial="closed"
                                     animate="open"
@@ -224,7 +228,7 @@ function Navbar() {
                                     <a
                                         href="https://wa.me/33751516642"
                                         onClick={handleClick}
-                                        className="block w-full py-4 px-6 bg-gradient-to-r from-[#25A5A0] to-[#2CC2BA] text-white font-semibold text-center rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                                        className="block w-full py-4 px-6 bg-white text-[#25A5A0] font-bold text-center rounded-2xl shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 border-2 border-white"
                                     >
                                         Nous contacter
                                     </a>
@@ -234,7 +238,6 @@ function Navbar() {
                     )}
                 </AnimatePresence>
             </motion.nav>
-        </>
     );
 }
 
