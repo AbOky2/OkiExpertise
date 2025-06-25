@@ -69,7 +69,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
     
     className="  w-full">
       <Navbar/>      
-      <header className="bg-[url('/bgOki.jpg')] h-screen bg-blend-overlay brightness-75 md:mb-20 mb-10 w-full justify-center flex  bg-no-repeat bg-cover text-white ">
+      <header className="bg-[url('/bgOki.jpg')] h-screen bg-blend-overlay brightness-75 md:mb-20  w-full justify-center flex  bg-no-repeat bg-cover text-white ">
         <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -99,7 +99,7 @@ Je m&apos;appelle Saleh, je suis un jeune Expert-Comptable et je suis là pour v
       <Services/>
 
         <SolutionsPersonnalise/>
-        {/* <Accompagnement/>              */}
+        {/* <Accompagnement/>*/}
         <NousChoisir/>
 
    

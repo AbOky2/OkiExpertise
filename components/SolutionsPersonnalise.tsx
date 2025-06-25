@@ -9,7 +9,7 @@ function SolutionsPersonnalise() {
   return (
     <section
       ref={sectionRef} 
-      className="relative py-20 mb-20 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+      className="relative py-20  overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
     >
       {/* Background animé avec particules */}
       <div className="absolute inset-0">
