@@ -1,4 +1,11 @@
-import { KNOWLEDGE_BASE } from './chatbot-config'
+import { NextApiRequest, NextApiResponse } from 'next'
+import OpenAI from 'openai'
+import { KNOWLEDGE_BASE } from '@/lib/chatbot-config'
+
+// Configuration OpenAI côté serveur (sécurisé)
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY, // Variable d'environnement serveur
+})
 
 // Fonction pour extraire le contexte pertinent de la base de connaissances
 const extractRelevantContext = (question: string): string => {
@@ -20,7 +27,7 @@ const extractRelevantContext = (question: string): string => {
     )
   }
   
-  return relevantCategories.slice(0, 3).join('\n\n---\n\n') // Limite à 3 catégories pour éviter un contexte trop long
+  return relevantCategories.slice(0, 3).join('\n\n---\n\n')
 }
 
 // Système prompt pour GPT
@@ -55,38 +62,6 @@ INTERDICTIONS :
 
 Si une question est hors sujet, réponds poliment que tu es spécialisé dans l'expertise comptable et oriente vers les services d'Oki Expertise.`
 
-// Fonction principale pour générer une réponse avec GPT (via API sécurisée)
-export const generateGPTResponse = async (question: string): Promise<string> => {
-  try {
-    // Appel à notre API sécurisée
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ question }),
-    })
-
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP: ${response.status}`)
-    }
-
-    const data = await response.json()
-    
-    if (data.error) {
-      throw new Error(data.error)
-    }
-
-    return data.response
-
-  } catch (error) {
-    console.error('Erreur GPT:', error)
-    
-    // Fallback vers la base de connaissances locale
-    return generateFallbackResponse(question)
-  }
-}
-
 // Fonction de fallback en cas d'erreur GPT
 const generateFallbackResponse = (question: string): string => {
   const questionLower = question.toLowerCase()
@@ -94,7 +69,7 @@ const generateFallbackResponse = (question: string): string => {
   // Recherche dans la base de connaissances locale
   for (const [, data] of Object.entries(KNOWLEDGE_BASE)) {
     if (data.keywords.some(keyword => questionLower.includes(keyword))) {
-      return `${data.response}\n\n💡 *Réponse générée par notre base de connaissances. Pour des conseils personnalisés, contactez-nous au +33 7 51 51 66 42.*`
+      return `${data.response}\n\n💡 *Pour des conseils personnalisés, contactez-nous au +33 7 51 51 66 42.*`
     }
   }
   
@@ -117,15 +92,78 @@ Notre équipe d'experts-comptables vous répondra dans les plus brefs délais av
 Y a-t-il autre chose sur laquelle je peux vous renseigner ?`
 }
 
-// Fonction pour valider si une question est dans le domaine d'expertise
-export const isQuestionRelevant = (question: string): boolean => {
-  const relevantKeywords = [
-    'comptable', 'comptabilité', 'audit', 'fiscal', 'juridique', 'entreprise',
-    'société', 'création', 'bilan', 'déclaration', 'tva', 'impôt', 'charge',
-    'salaire', 'statut', 'sarl', 'sas', 'auto-entrepreneur', 'micro-entreprise',
-    'expert-comptable', 'commissaire', 'conseil', 'gestion', 'finance'
-  ]
-  
-  const questionLower = question.toLowerCase()
-  return relevantKeywords.some(keyword => questionLower.includes(keyword))
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Vérifier la méthode HTTP
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Méthode non autorisée' })
+  }
+
+  try {
+    const { question } = req.body
+
+    // Validation de base
+    if (!question || typeof question !== 'string' || question.trim().length === 0) {
+      return res.status(400).json({ error: 'Question manquante ou invalide' })
+    }
+
+    // Limitation de longueur
+    if (question.length > 500) {
+      return res.status(400).json({ error: 'Question trop longue (max 500 caractères)' })
+    }
+
+    // Vérification de la clé API
+    if (!process.env.OPENAI_API_KEY) {
+      console.warn('Clé API OpenAI manquante, utilisation du fallback')
+      return res.status(200).json({ 
+        response: generateFallbackResponse(question),
+        source: 'fallback'
+      })
+    }
+
+    // Extraction du contexte pertinent
+    const context = extractRelevantContext(question)
+    
+    // Appel à l'API OpenAI
+    const completion = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "system",
+          content: `${SYSTEM_PROMPT}\n\nCONTEXTE PERTINENT :\n${context}`
+        },
+        {
+          role: "user",
+          content: question
+        }
+      ],
+      max_tokens: 300,
+      temperature: 0.7,
+      presence_penalty: 0.1,
+      frequency_penalty: 0.1
+    })
+
+    const response = completion.choices[0]?.message?.content?.trim()
+    
+    if (!response) {
+      throw new Error('Réponse vide de GPT')
+    }
+
+    return res.status(200).json({ 
+      response,
+      source: 'gpt',
+      tokens: completion.usage?.total_tokens || 0
+    })
+
+  } catch (error) {
+    console.error('Erreur API Chat:', error)
+    
+    // Fallback en cas d'erreur
+    const fallbackResponse = generateFallbackResponse(req.body.question || '')
+    
+    return res.status(200).json({ 
+      response: fallbackResponse,
+      source: 'fallback',
+      error: 'Erreur GPT, utilisation du fallback'
+    })
+  }
 } 

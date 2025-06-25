@@ -46,8 +46,22 @@ const ChatbotRAG: React.FC<ChatbotRAGProps> = ({ isOpen, onClose }) => {
   }, [isOpen])
 
   useEffect(() => {
-    // Vérifier si GPT est configuré
-    setIsGPTEnabled(!!process.env.NEXT_PUBLIC_OPENAI_API_KEY)
+    // Vérifier si l'API GPT est disponible
+    const checkGPTAvailability = async () => {
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: 'test' }),
+        })
+        const data = await response.json()
+        setIsGPTEnabled(data.source === 'gpt')
+      } catch {
+        setIsGPTEnabled(false)
+      }
+    }
+    
+    checkGPTAvailability()
   }, [])
 
   const handleSendMessage = async () => {
