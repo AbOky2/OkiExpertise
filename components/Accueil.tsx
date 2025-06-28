@@ -9,7 +9,6 @@ import NousChoisir from './NousChoisir'
 import Navbar from './Navbar'
 import NewForm from './NewForm'
 import Services from './Services'
-import { Button } from './ui/moving-border'
 import { useRef } from 'react'
 import ChatbotButton from './ChatbotButton'
 

@@ -115,12 +115,7 @@ function MyCards({ image, title, description, details, index }: MyCardsProps) {
                     animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <button className="flex items-center gap-2 text-[#25A5A0] font-semibold text-sm hover:gap-3 transition-all duration-300">
-                        En savoir plus
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                   
                 </motion.div>
         </div>
       </motion.div>

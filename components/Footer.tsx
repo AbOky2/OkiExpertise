@@ -111,9 +111,7 @@ function Footer() {
                   <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg px-4 py-2">
                     <span className="text-sm font-medium text-[#25A5A0]">Certifié Expert-Comptable</span>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg px-4 py-2">
-                    <span className="text-sm font-medium text-[#2CC2BA]">Agréé Île-de-France</span>
-                  </div>
+                 
                 </div>
               </div>
             </motion.div>
