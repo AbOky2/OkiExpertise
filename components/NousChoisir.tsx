@@ -377,24 +377,7 @@ function NousChoisir() {
                     </div>
                   )}
 
-                  {/* Bouton d'action au hover */}
-                  <motion.div
-                    className="mt-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ 
-                      opacity: hoveredCard === index ? 1 : 0,
-                      y: hoveredCard === index ? 0 : 20
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <motion.button
-                      className={`w-full bg-gradient-to-r ${card.color} text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      En savoir plus
-                    </motion.button>
-                  </motion.div>
+                 
                 </div>
 
                 {/* Border animé */}

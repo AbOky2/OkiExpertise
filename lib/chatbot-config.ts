@@ -30,6 +30,224 @@ export const CHATBOT_CONFIG = {
 }
 
 export const KNOWLEDGE_BASE: Record<string, KnowledgeItem> = {
+  presentation_entreprise: {
+    category: "Présentation",
+    keywords: [
+      'présentation', 'qui êtes-vous', 'entreprise', 'cabinet', 'à propos',
+      'histoire', 'oki expertise', 'présenter', 'parlez-moi', 'qui sommes-nous'
+    ],
+    response: `**Oki Expertise - Cabinet d'Expertise Comptable à Paris**
+
+🏢 **Localisation**
+   • **Adresse** : 9 rue des Colonnes, 75002 Paris
+   • **SIRET** : 980 509 483 00015
+   • Implanté au cœur de Paris, dans le 2e arrondissement
+
+👨‍💼 **Direction**
+   • **SALEH Issa Soumaine** - Managing Partner & Expert-Comptable
+   • Diplômé DEC, inscrit à l'Ordre des Experts-Comptables Paris Île-de-France
+   • Plus de 8 ans d'expérience, dont 7,5 ans chez Deloitte (Big Four)
+
+🌍 **Présence Internationale**
+   • **Bureaux** : Paris (France) et N'Djamena (Tchad)
+   • Expertise internationale avec connaissance des normes locales
+   • Accompagnement personnalisé selon les spécificités fiscales et légales
+
+🎯 **Notre Mission**
+Oki Expertise est dédié à offrir des services de haute qualité dans la comptabilité, l'audit et le conseil stratégique. Nous comprenons l'importance cruciale d'une gestion financière efficace pour la croissance et le succès d'une entreprise.
+
+Souhaitez-vous en savoir plus sur nos services ou notre équipe ?`
+  },
+
+  expert_comptable: {
+    category: "Expert-Comptable",
+    keywords: [
+      'expert-comptable', 'saleh', 'issa', 'dirigeant', 'associé', 'gérant',
+      'diplôme', 'formation', 'expérience', 'parcours', 'deloitte', 'big four'
+    ],
+    response: `**SALEH Issa Soumaine - Expert-Comptable Diplômé**
+
+🎓 **Formation & Diplômes**
+   • **2023** : Diplôme d'Expertise Comptable (DEC) - Niveau Doctorat
+   • **2018** : Diplôme Supérieur de Comptabilité et de Gestion (DSCG)
+   • **2014** : Master Comptabilité Contrôle Audit (CCA) - Université Jean-Moulin Lyon III
+   • **2013** : Maîtrise Comptabilité Contrôle Audit (CCA)
+
+💼 **Expérience Professionnelle**
+   • **Depuis Oct. 2023** : Associé gérant d'Oki Expertise
+   • **2022-2023** : Consultant Freelance
+   • **2015-2022** : Cabinet Deloitte (7,5 ans) - Assistant à Manager 3
+   • **2014** : Cabinet Ernst & Young - Junior
+
+🏆 **Expertises Sectorielles**
+   • Industrie, Services, Projets de développement
+   • Banque et Finance Islamique
+   • Technologies, Médias, Télécoms
+   • Énergie, Oil & Gas
+   • Secteur public & ONG
+
+📋 **Inscriptions Professionnelles**
+   • Inscrit à l'Ordre des Experts-Comptables Île-de-France
+   • N° d'inscription : 140000455301
+
+Voulez-vous discuter de votre projet avec notre expert-comptable ?`
+  },
+
+  services_detailles: {
+    category: "Services Détaillés",
+    keywords: [
+      'services détaillés', 'prestations complètes', 'missions', 'audit financier',
+      'finance islamique', 'risques', 'réglementaire', 'tax legal'
+    ],
+    response: `**Nos Services Complets**
+
+🔍 **AUDIT**
+   • Audit comptable et financier
+   • Commissariat aux apports
+   • Audit des coûts pétroliers
+   • Audit qualité, stratégique et opérationnel
+   • Missions contractuelles d'audit
+
+🕌 **FINANCE ISLAMIQUE**
+   • Élaboration du contrôle interne bancaire islamique
+   • Audit chariatique contractuel
+   • Gouvernance chariatique
+   • Évaluation des dispositifs de contrôle interne
+
+⚖️ **TAX & LEGAL**
+   • Fiscalité des entreprises et individuelle
+   • Obligations déclaratives et revue fiscale
+   • Audit et contentieux fiscal
+   • Conseil juridique et restructuration d'entreprises
+   • Négociation de conventions fiscales internationales
+
+🛡️ **RISQUES & RÉGLEMENTAIRE**
+   • Cartographie des risques
+   • Stratégie de gouvernance COSO
+   • Risques SI & Technologique, Cyber-risques
+   • Conformité OHADA, CEMAC, COBAC
+
+💼 **CONSEIL**
+   • Études de faisabilité et business plan
+   • Évaluation d'entreprise
+   • Stratégie & Innovation
+   • Marketing & Commercial
+   • Systèmes d'Information & Technologies
+
+Quel service vous intéresse le plus ?`
+  },
+
+  valeurs_entreprise: {
+    category: "Valeurs",
+    keywords: [
+      'valeurs', 'excellence', 'proximité', 'efficacité', 'engagement',
+      'philosophie', 'approche', 'méthode', 'différence', 'pourquoi vous choisir'
+    ],
+    response: `**Nos Valeurs Fondamentales**
+
+🌟 **EXCELLENCE**
+L'Excellence est bien plus qu'une simple aspiration ; c'est une norme que nous nous efforçons de surpasser à chaque étape de notre travail. La qualité de nos services est la pierre angulaire de notre réputation.
+
+🤝 **PROXIMITÉ**
+Nous considérons nos clients comme des partenaires et comprenons l'importance d'une communication transparente et ouverte. La proximité signifie que nous sommes là pour écouter, comprendre et répondre aux besoins spécifiques de chaque client.
+
+⚡ **EFFICACITÉ**
+Nous investissons dans des processus modernes et des technologies de pointe pour garantir une prestation de services rapide, précise et adaptée. Notre engagement envers l'efficacité ne compromet jamais la qualité.
+
+🎯 **Notre Engagement**
+L'engagement envers l'excellence, la proximité avec nos clients et l'efficacité opérationnelle sont les piliers fondamentaux d'Oki Expertise. Nous sommes fiers de contribuer activement au succès de nos clients.
+
+💡 **Approche Personnalisée**
+Nous croyons fermement que chaque client est unique, c'est pourquoi nous nous efforçons de fournir des solutions sur mesure qui répondent à vos besoins spécifiques et à vos objectifs commerciaux.
+
+Ces valeurs vous correspondent-elles ? Parlons de votre projet !`
+  },
+
+  secteurs_intervention: {
+    category: "Secteurs",
+    keywords: [
+      'secteurs', 'domaines', 'industries', 'spécialisation', 'technologies',
+      'médias', 'télécoms', 'banque', 'assurance', 'énergie', 'oil', 'gas',
+      'éducation', 'formation', 'ong', 'secteur public'
+    ],
+    response: `**Nos Secteurs d'Intervention**
+
+🖥️ **Technologies, Médias & Télécoms**
+   • Startups technologiques
+   • Entreprises de médias
+   • Sociétés de télécommunications
+
+🏭 **Industries & Services**
+   • Secteur industriel
+   • Services aux entreprises
+   • Manufacturing
+
+🏛️ **Secteur Public & ONG**
+   • Administrations publiques
+   • Organisations non gouvernementales
+   • Associations
+
+🏦 **Banque & Assurance**
+   • Institutions bancaires
+   • Compagnies d'assurance
+   • Finance islamique
+
+⚡ **Énergie, Oil & Gas**
+   • Compagnies pétrolières
+   • Énergies renouvelables
+   • Secteur énergétique
+
+🎓 **Éducation/Formation**
+   • Établissements d'enseignement
+   • Centres de formation
+   • Organismes éducatifs
+
+🌍 **Expertise Internationale**
+Notre présence au Tchad nous permet d'offrir une expertise adaptée aux spécificités africaines, avec une connaissance approfondie des normes OHADA, CEMAC et COBAC.
+
+Dans quel secteur évoluez-vous ? Nous avons l'expertise adaptée !`
+  },
+
+  presence_internationale: {
+    category: "International",
+    keywords: [
+      'international', 'tchad', 'afrique', 'ndjamena', 'ohada', 'cemac',
+      'cobac', 'normes locales', 'expertise internationale', 'présence'
+    ],
+    response: `**Notre Présence Internationale**
+
+🌍 **Bureaux**
+   • **Paris, France** : 9 rue des Colonnes, 75002
+   • **N'Djamena, Tchad** : Présence locale établie
+
+🎯 **Avantages de Notre Présence au Tchad**
+
+✅ **Expertise Internationale**
+La présence d'Oki Expertise au Tchad témoigne de notre capacité à offrir une expertise internationale adaptée.
+
+✅ **Accompagnement Localisé**
+Nous offrons un accompagnement personnalisé, prenant en compte les spécificités fiscales, légales et économiques locales.
+
+✅ **Réactivité et Proximité**
+Notre présence locale facilite une communication fluide et immédiate avec nos clients basés au Tchad.
+
+✅ **Connaissance des Normes Locales**
+Expertise approfondie des normes comptables et fiscales tchadiennes en constante évolution.
+
+✅ **Adaptabilité Culturelle**
+Compréhension de la culture d'affaires locale pour construire des relations durables.
+
+📋 **Conformité Réglementaire**
+   • **OHADA** : Organisation pour l'Harmonisation en Afrique du Droit des Affaires
+   • **CEMAC** : Communauté Économique et Monétaire de l'Afrique Centrale
+   • **COBAC** : Commission Bancaire de l'Afrique Centrale
+
+🏆 **Avantages Concurrentiels**
+La combinaison de l'expertise parisienne et de la présence locale confère à Oki Expertise des avantages distincts.
+
+Avez-vous des projets en Afrique ou besoin d'expertise internationale ?`
+  },
+
   services: {
     category: "Services",
     keywords: [
@@ -135,13 +353,18 @@ Voulez-vous discuter de votre projet de création ?`
     response: `Contactez Oki Expertise facilement :
 
 📞 **Téléphone**
-   +33 7 51 51 66 42
+   • Mobile : +33 7 51 51 66 42
+   • Fixe : +33 9 77 21 92 25
+   • Mobile Tchad : +235 66 21 28 79
 
 💬 **WhatsApp**
    Disponible 24h/7j pour vos questions urgentes
 
 📧 **Email**
-   Via notre formulaire de contact sécurisé
+   issa.saleh@okiexpertise.fr
+
+📍 **Adresse**
+   9 rue des Colonnes, 75002 Paris
 
 🕐 **Horaires**
    • Lundi - Vendredi : 9h00 - 18h00
@@ -198,93 +421,90 @@ Besoin d'un audit pour votre entreprise ?`
       'juridique', 'droit', 'contrat', 'social', 'fiscal', 'optimisation',
       'conseil', 'legal', 'conformité', 'réglementation', 'loi'
     ],
-    response: `Notre expertise en conseil juridique et fiscal :
+    response: `Nos services de conseil juridique et fiscal :
 
-⚖️ **Droit des Sociétés**
-   • Transformation de sociétés
-   • Augmentation de capital
-   • Cession/acquisition
-   • Pactes d'actionnaires
+⚖️ **Conseil Juridique**
+   • Droit des sociétés
+   • Contrats commerciaux
+   • Restructurations d'entreprises
+   • Fusions et acquisitions
 
-💼 **Droit Social**
-   • Contrats de travail
-   • Conventions collectives
-   • Ruptures conventionnelles
-   • Représentation du personnel
+💼 **Optimisation Fiscale**
+   • Analyse de votre situation fiscale
+   • Stratégies d'optimisation légales
+   • Gestion des obligations déclaratives
+   • Négociation avec l'administration
 
-📊 **Optimisation Fiscale**
-   • Choix du régime fiscal optimal
-   • Crédit d'impôt recherche (CIR)
-   • TVA et taxes spécifiques
-   • Transmission d'entreprise
-
-🔒 **Conformité**
-   • RGPD et protection des données
-   • Obligations légales
+🛡️ **Conformité Réglementaire**
+   • Mise en conformité RGPD
+   • Respect des normes sectorielles
    • Veille réglementaire
-   • Formation équipes
+   • Formation de vos équipes
 
-Notre approche : conseil préventif pour éviter les risques juridiques et fiscaux.`
+🌍 **Droit International**
+   • Conventions fiscales internationales
+   • Implantations à l'étranger
+   • Normes OHADA (Afrique)
+
+Quels sont vos enjeux juridiques et fiscaux ?`
   },
 
   secteurs: {
     category: "Secteurs d'activité",
     keywords: [
-      'secteur', 'activité', 'industrie', 'commerce', 'btp', 'construction',
-      'restaurant', 'hôtel', 'médical', 'libéral', 'artisan', 'spécialisation'
+      'secteur', 'secteurs', 'activité', 'industrie', 'commerce', 'service',
+      'spécialisation', 'domaine', 'expertise sectorielle'
     ],
-    response: `Oki Expertise intervient dans de nombreux secteurs :
+    response: `Nos domaines d'expertise sectorielle :
 
 🏭 **Industrie & BTP**
    • Manufacturing et production
-   • Construction et travaux publics
-   • Énergie et environnement
-   • Spécificités comptables sectorielles
+   • Bâtiment et travaux publics
+   • Ingénierie et construction
+
+💼 **Services & Conseil**
+   • Conseil en management
+   • Services aux entreprises
+   • Professions libérales
 
 🛒 **Commerce & Distribution**
    • Commerce de détail
-   • E-commerce et marketplace
-   • Import/export
-   • Gestion des stocks
+   • Grande distribution
+   • E-commerce
 
-🍽️ **Hôtellerie-Restauration**
-   • Restaurants et bars
-   • Hôtels et hébergements
-   • Traiteurs et événementiel
-   • Réglementation spécifique
+🏦 **Finance & Assurance**
+   • Institutions financières
+   • Compagnies d'assurance
+   • Finance islamique
 
-👨‍⚕️ **Professions Libérales**
-   • Médecins et paramédicaux
-   • Avocats et notaires
-   • Architectes et ingénieurs
-   • Régimes fiscaux spéciaux
+🎓 **Éducation & Formation**
+   • Établissements d'enseignement
+   • Organismes de formation
+   • Recherche et développement
 
-🎨 **Services & Conseil**
-   • Agences de communication
-   • Cabinets de conseil
-   • Sociétés de services
-   • Startups et scale-ups
+🏛️ **Secteur Public & Associations**
+   • Collectivités territoriales
+   • ONG et associations
+   • Fondations
 
-Quel que soit votre secteur, nous nous adaptons à vos spécificités !`
+Dans quel secteur évoluez-vous ?`
   }
 }
 
+// Réponse par défaut si aucune correspondance trouvée
 export const DEFAULT_RESPONSE = (question: string) => `Je comprends votre question sur "${question}".
 
-Pour vous donner la réponse la plus précise et personnalisée, je vous invite à :
+🤖 Pour vous donner la réponse la plus précise et personnalisée, je vous recommande de :
 
 📞 **Contacter directement notre équipe**
    +33 7 51 51 66 42
 
 💬 **Utiliser WhatsApp**
-   Pour une réponse rapide et directe
+   Réponse rapide garantie
 
-📧 **Remplir notre formulaire**
-   Contact sécurisé sur notre site
+📧 **Email**
+   issa.saleh@okiexpertise.fr
 
-🎯 **Prendre rendez-vous**
-   Consultation gratuite de 30 minutes
-
-Notre équipe d'experts-comptables vous répondra dans les plus brefs délais avec des conseils personnalisés selon votre situation spécifique.
+Notre équipe d'experts-comptables vous répondra dans les plus brefs délais avec des conseils adaptés à votre situation.
 
 Y a-t-il autre chose sur laquelle je peux vous renseigner ?` 
