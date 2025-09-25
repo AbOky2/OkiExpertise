@@ -98,7 +98,7 @@ export function Accueil() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
               >
-                Audit - Expertise
+                Audit
               </motion.span>
               <motion.span 
                 className="block bg-gradient-to-r from-[#25A5A0] via-[#2CC2BA] to-[#25A5A0] bg-clip-text text-transparent"
@@ -106,7 +106,7 @@ export function Accueil() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.4 }}
               >
-                Comptable - Conseil
+                Expertise Comptable
               </motion.span>
               <motion.span 
                 className="block text-white"
@@ -114,7 +114,7 @@ export function Accueil() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.6 }}
               >
-                Juridique
+                Conseil
               </motion.span>
             </motion.h1>
 
@@ -128,7 +128,7 @@ export function Accueil() {
               Oki Expertise accompagne les entreprises et sociétés commerciales dans leurs défis de 
               <span className="text-[#25A5A0] font-semibold"> gestion financière</span> et 
               <span className="text-[#2CC2BA] font-semibold"> administrative</span> en matière comptable, 
-              juridique, légale et managériale.
+              juridique, fiscale et managériale.
             </motion.p>
           
             {/* CTA Button amélioré */}

@@ -49,7 +49,7 @@ const generateFallbackResponse = (question: string): string => {
 🤖 Pour vous donner la réponse la plus précise et personnalisée, je vous recommande de :
 
 📞 **Contacter directement notre équipe**
-   +33 7 51 51 66 42
+   +33 7 69 59 12 20
 
 💬 **Utiliser WhatsApp**
    Réponse rapide garantie

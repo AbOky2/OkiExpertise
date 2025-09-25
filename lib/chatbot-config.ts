@@ -310,7 +310,7 @@ Souhaitez-vous plus de détails sur un service particulier ?`
    • Réactivité garantie sous 24h
 
 📞 **Obtenir un devis**
-Contactez-nous au **+33 7 51 51 66 42** ou via WhatsApp pour recevoir votre devis personnalisé gratuit.`
+Contactez-nous au **+33 7 69 59 12 20** ou via WhatsApp pour recevoir votre devis personnalisé gratuit.`
   },
 
   creation: {
@@ -353,7 +353,7 @@ Voulez-vous discuter de votre projet de création ?`
     response: `Contactez Oki Expertise facilement :
 
 📞 **Téléphone**
-   • Mobile : +33 7 51 51 66 42
+   • Mobile : +33 7 69 59 12 20
    • Fixe : +33 9 77 21 92 25
    • Mobile Tchad : +235 66 21 28 79
 
@@ -497,7 +497,7 @@ export const DEFAULT_RESPONSE = (question: string) => `Je comprends votre questi
 🤖 Pour vous donner la réponse la plus précise et personnalisée, je vous recommande de :
 
 📞 **Contacter directement notre équipe**
-   +33 7 51 51 66 42
+   +33 7 69 59 12 20
 
 💬 **Utiliser WhatsApp**
    Réponse rapide garantie

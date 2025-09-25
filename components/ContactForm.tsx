@@ -249,7 +249,7 @@ id='contact'
                       value={formData.telephone}
                       onChange={handleInputChange}
                       className="w-full pl-14 pr-6 py-4 bg-white/5 border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#25A5A0] focus:border-transparent transition-all duration-300 backdrop-blur-sm group-hover:bg-white/10"
-                      placeholder="+33 6 12 34 56 78"
+                      placeholder="+33 7 69 59 12 20"
                     />
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#25A5A0]/20 to-[#2CC2BA]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
       </div>
@@ -366,8 +366,8 @@ id='contact'
                 </svg>
               ),
               title: "Téléphone",
-              info: "+33 7 51 51 66 42",
-              link: "tel:+33751516642"
+              info: "+33 7 69 59 12 20",
+              link: "tel:+33769591220"
             },
             {
               icon: (
@@ -376,8 +376,8 @@ id='contact'
                 </svg>
               ),
               title: "Email",
-              info: "contact@oki-expertise.fr",
-              link: "mailto:contact@oki-expertise.fr"
+              info: "contact@okiexpertise.fr",
+              link: "mailto:contact@okiexpertise.fr"
             },
             {
               icon: (

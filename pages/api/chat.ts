@@ -42,7 +42,7 @@ IDENTITÉ & PERSONNALITÉ :
 INFORMATIONS ENTREPRISE :
 - Oki Expertise : Cabinet d'expertise comptable, audit et conseil
 - Inscrit à l'Ordre des Experts-Comptables
-- Téléphone : +33 7 51 51 66 42
+- Téléphone : +33 7 69 59 12 20
 - Services : Expertise comptable, Audit, Conseil juridique et fiscal, Création d'entreprise
 - Spécialisé dans l'accompagnement des TPE/PME
 
@@ -69,7 +69,7 @@ const generateFallbackResponse = (question: string): string => {
   // Recherche dans la base de connaissances locale
   for (const [, data] of Object.entries(KNOWLEDGE_BASE)) {
     if (data.keywords.some(keyword => questionLower.includes(keyword))) {
-      return `${data.response}\n\n💡 *Pour des conseils personnalisés, contactez-nous au +33 7 51 51 66 42.*`
+      return `${data.response}\n\n💡 *Pour des conseils personnalisés, contactez-nous au +33 7 69 59 12 20.*`
     }
   }
   
@@ -79,7 +79,7 @@ const generateFallbackResponse = (question: string): string => {
 🤖 Pour vous donner la réponse la plus précise et personnalisée, je vous recommande de :
 
 📞 **Contacter directement notre équipe**
-   +33 7 51 51 66 42
+   +33 7 69 59 12 20
 
 💬 **Utiliser WhatsApp**
    Réponse rapide garantie
