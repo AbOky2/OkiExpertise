@@ -89,7 +89,12 @@ function NewForm() {
                                 <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
                             </svg>
                         </div>
-                        <div className="md:text-lg font-semibold text-gray-700">contact@okiexpertise.fr</div>
+                    <a
+                    href="mailto:contact@okiexpertise.fr"
+                    className="md:text-lg font-semibold text-gray-700 hover:underline"
+                    >
+                    contact@okiexpertise.fr
+                    </a>                    
                     </div>
                     <div className="flex items-center gap-4 p-4 bg-white/70 backdrop-blur-sm rounded-2xl border border-gray-200/50 hover:shadow-lg transition-all duration-300 md:col-span-2">
                         <div className="w-12 h-12 bg-gradient-to-br from-[#25A5A0] to-[#2CC2BA] rounded-xl flex items-center justify-center text-white">
